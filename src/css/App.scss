@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './breakpoints.scss';
+$colors: (#d13447, #ffbf00, #263672);
+$blue: #007aff;
+$green: #52c789;
+$yellow: #ff9500;
+$purple: #8886d6;
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  .logo {
+    text-align: left;
+    font-size: 20pt;
+    @include media("<=phone"){
+      font-size: 15pt;
+      padding: 1vh;
+    }
+    @include media('>phone', '<=425px'){
+      font-size: 15pt;
+      padding: 1vh;
+    }
+    font-weight: 900;
+    background-color: black;
+    width: 100vw;
+    color: white;
+    margin: 0;
+    padding: 3vh;
+    position: -webkit-sticky; /* Safari */
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+[class|='confetti'] {
+  position: absolute;
+}
+
+@for $i from 0 through 150 {
+  $w: random(8);
+  $l: random(100);
+  .confetti-#{$i} {
+    width: #{$w}px;
+    height: #{$w * 0.4}px;
+    background-color: nth($colors, random(3));
+    top: -10%;
+    left: unquote($l + '%');
+    opacity: random() + 0.5;
+    transform: rotate(#{random() * 360}deg);
+    animation: drop-#{$i} unquote(4 + random() + 's') unquote(random() + 's');
+  }
+
+  @keyframes drop-#{$i} {
+    100% {
+      top: 110%;
+      left: unquote($l + random(15) + '%');
+    }
+  }
+}
+
+@keyframes fadeUpAnimation {
+  0% {
+    margin-top: 100vh;
+  }
+  100% {
+    margin-top: 0vh;
+  }
+}
+
+.top-half {
+  width: 100vw;
+  margin-top: 18vh;
+  margin-bottom: 10vh;
+  height: 35vh;
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50pt;
+
+    @include media("<=phone"){
+      font-size: 15pt;
+    }
+    @include media('>phone', '<=425px'){
+      font-size: 30pt;
+    }
+  }
+
+  &:hover .profilePic{
+    border-radius: 20px;
+    transform: rotate(8deg);
+    background-color: $purple;
+  }
+
+  &:hover .name{
+
+    text-decoration: none;
+    color: $purple;
+ 
+  }
+
+
+  .profilePic{
+    background-color: $green;
+    border-radius: 60px;
+    background-clip: padding-box;
+    transition: .3s;
+  }
+
+  height: auto;
+}
+
+.cards {
+  animation: fadeUpAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  .card {
+    h1 {
+      color: white;
+      text-align: center;
+      margin: auto;
+      font-weight: bolder;
+      font-size: 40pt;
+      line-height: 10vh;
+      transition: 0.3s;
+    }
+    overflow: hidden;
+    margin: auto;
+    width: 100vw;
+    border-radius: 0px;
+    height: 8vh;
+    padding: 20px;
+    transition: 1s;
+
+    &:nth-child(4n + 0) {
+      background-color: $blue;
+    }
+    &:nth-child(4n + 1) {
+      background-color: $green;
+    }
+    &:nth-child(4n + 2) {
+      background-color: $yellow;
+    }
+    &:nth-child(4n + 3) {
+      background-color: $purple;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+      height: 20vh;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+      cursor: pointer;
+
+      h1 {
+        line-height: 20vh;
+      }
+    }
+
+    .card-interior {
+      display: none;
+    }
+
+    &:active {
+      .card-interior {
+        display: block;
+      }
+    }
+  }
+}
+
+.expanded-card {
+  h1 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-weight: bolder;
+    font-size: 40pt;
+    line-height: 10vh;
+    transition: 0.3s;
+  }
+  overflow: hidden;
+  margin: auto;
+  width: 100vw;
+  border-radius: 0px;
+  height: 4vh;
+  padding: 20px;
+  transition: 1s;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background-color: black;
+  & :active{
+    background-color: blue;
+  }
+}
+
+.footer{
+  height: 100vh;
+}
