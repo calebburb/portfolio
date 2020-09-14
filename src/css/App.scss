@@ -13,6 +13,8 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  background-color: black;
+  color: white;
 
   .logo {
     text-align: left;
@@ -31,7 +33,6 @@ body {
     color: white;
     margin: 0;
     padding: 3vh;
-    position: -webkit-sticky; /* Safari */
   }
 
   a {
@@ -118,6 +119,8 @@ body {
  
   }
 
+  
+
 
   .profilePic{
     background-color: $green;
@@ -143,6 +146,13 @@ body {
       font-size: 40pt;
       line-height: 10vh;
       transition: 0.3s;
+
+      @include media("<=phone"){
+        font-size: 30pt;
+      }
+      @include media('>phone', '<=425px'){
+        font-size: 20pt;
+      }
     }
     overflow: hidden;
     margin: auto;

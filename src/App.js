@@ -6,7 +6,7 @@ import Confetti from './components/Confetti.js'
 function App () {
   return (
     <div className='App'>
-      <div className='logo'>C A L E B </div>
+      <div className='logo'>C A L E B</div>
 
       <div className='top-half'>
         <img
@@ -17,9 +17,9 @@ function App () {
         <h1>
           Hello, I'm{' '}
           <a className='name' href='https://www.instagram.com/ui.burb/'>
-            Caleb
+            Caleb Burbach
           </a>{' '}
-          Burbach ✌️ <br></br> Welcome to my portfolio
+          ✌️ <br></br> Welcome to my portfolio
         </h1>
       </div>
       <Confetti></Confetti>
