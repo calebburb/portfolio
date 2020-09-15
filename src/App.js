@@ -15,11 +15,10 @@ function App () {
         />
 
         <h1>
-          Hello, I'm{' '}
+          Hello, I'm Caleb Burbach ✌️ <br></br>
           <a className='name' href='https://www.instagram.com/ui.burb/'>
-            Caleb Burbach
-          </a>{' '}
-          ✌️ <br></br> Welcome to my portfolio
+            Welcome to my portfolio
+          </a>
         </h1>
       </div>
       <Confetti></Confetti>
@@ -33,6 +32,7 @@ function App () {
         <Card title='Wikipedia Redesign' id='WikipediaCard'></Card>
         <Card title='Spotify Redesign' id='SpotifyCard'></Card>
       </div>
+
       <div className='footer'></div>
     </div>
   )

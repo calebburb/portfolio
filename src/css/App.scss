@@ -19,11 +19,11 @@ body {
   .logo {
     text-align: left;
     font-size: 20pt;
-    @include media("<=phone"){
+    @include media('<=phone') {
       font-size: 15pt;
       padding: 1vh;
     }
-    @include media('>phone', '<=425px'){
+    @include media('>phone', '<=425px') {
       font-size: 15pt;
       padding: 1vh;
     }
@@ -98,35 +98,30 @@ body {
     font-weight: bold;
     font-size: 50pt;
 
-    @include media("<=phone"){
+    @include media('<=phone') {
       font-size: 15pt;
     }
-    @include media('>phone', '<=425px'){
+    @include media('>phone', '<=425px') {
       font-size: 30pt;
     }
   }
 
-  &:hover .profilePic{
+  &:hover .profilePic {
     border-radius: 20px;
     transform: rotate(8deg);
     background-color: $purple;
   }
 
-  &:hover .name{
-
+  &:hover .name {
     text-decoration: none;
     color: $purple;
- 
   }
 
-  
-
-
-  .profilePic{
+  .profilePic {
     background-color: $green;
     border-radius: 60px;
     background-clip: padding-box;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   height: auto;
@@ -147,10 +142,10 @@ body {
       line-height: 10vh;
       transition: 0.3s;
 
-      @include media("<=phone"){
+      @include media('<=phone') {
         font-size: 30pt;
       }
-      @include media('>phone', '<=425px'){
+      @include media('>phone', '<=425px') {
         font-size: 20pt;
       }
     }
@@ -220,11 +215,11 @@ body {
   width: 100vw;
   z-index: 100;
   background-color: black;
-  & :active{
+  & :active {
     background-color: blue;
   }
-}
 
-.footer{
+
+.footer {
   height: 100vh;
 }

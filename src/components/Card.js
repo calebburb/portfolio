@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../css/App.css'
-//comment
+
 class Card extends React.Component {
   constructor (props) {
     super(props)
