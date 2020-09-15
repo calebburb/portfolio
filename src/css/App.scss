@@ -6,7 +6,13 @@ $green: #52c789;
 $yellow: #ff9500;
 $purple: #8886d6;
 
+html,
 body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
@@ -218,7 +224,7 @@ body {
   & :active {
     background-color: blue;
   }
-
+}
 
 .footer {
   height: 100vh;
